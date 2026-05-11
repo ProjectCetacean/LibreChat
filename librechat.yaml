@@ -35,3 +35,11 @@ mcpServers:
     url: https://storygraph-mcp-blorbit.fly.dev/mcp
     timeout: 60000
     initTimeout: 30000
+
+  skills:
+    type: streamable-http
+    url: https://skills-mcp-blorbit.fly.dev/mcp
+    headers:
+      x-skills-key: "${SKILLS_MCP_KEY}"
+    timeout: 60000
+    initTimeout: 30000
