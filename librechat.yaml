@@ -1,0 +1,37 @@
+version: 1.2.1
+cache: true
+
+endpoints:
+  custom:
+    - name: "OpenRouter"
+      apiKey: "${OPENROUTER_KEY}"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: ["deepseek/deepseek-chat-v3.1", "deepseek/deepseek-v3.2-exp", "anthropic/claude-sonnet-4.5"]
+        fetch: true
+      titleConvo: true
+      titleModel: "deepseek/deepseek-chat-v3.1"
+      modelDisplayLabel: "OpenRouter"
+
+mcpServers:
+  open-brain:
+    type: streamable-http
+    url: https://cuvtcxtvxnthkkxxlrbb.supabase.co/functions/v1/open-brain-mcp
+    headers:
+      x-brain-key: "${OPEN_BRAIN_KEY}"
+    timeout: 60000
+    initTimeout: 30000
+
+  google-workspace:
+    type: streamable-http
+    url: https://cuvtcxtvxnthkkxxlrbb.supabase.co/functions/v1/google-workspace
+    headers:
+      x-workspace-key: "${WORKSPACE_MCP_KEY}"
+    timeout: 60000
+    initTimeout: 30000
+
+  storygraph:
+    type: streamable-http
+    url: https://storygraph-mcp-blorbit.fly.dev/mcp
+    timeout: 60000
+    initTimeout: 30000
