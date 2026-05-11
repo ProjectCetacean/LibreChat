@@ -1,4 +1,4 @@
-version: 1.2.1
+version: 1.3.9
 cache: true
 
 endpoints:
@@ -7,11 +7,13 @@ endpoints:
       apiKey: "${OPENROUTER_KEY}"
       baseURL: "https://openrouter.ai/api/v1"
       models:
-        default: ["deepseek/deepseek-chat-v3.1", "deepseek/deepseek-v3.2-exp", "anthropic/claude-sonnet-4.5"]
+        default: ["deepseek/deepseek-chat-v3.1", "deepseek/deepseek-v3.2-exp"]
         fetch: true
       titleConvo: true
       titleModel: "deepseek/deepseek-chat-v3.1"
       modelDisplayLabel: "OpenRouter"
+      systemMessage: |
+        On the first user message of a conversation, call list_skills on the skills MCP to discover available skill guidance. If a returned skill's description matches the task, call get_skill on it before proceeding. Do not summarize tools from prior training; rely on live discovery only.
 
 mcpServers:
   open-brain:
