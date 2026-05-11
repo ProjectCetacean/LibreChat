@@ -1,5 +1,5 @@
 app = "librechat-orbit"
-primary_region = "sea"
+primary_region = "sjc"
 
 [build]
   dockerfile = "Dockerfile.fly"
@@ -8,7 +8,7 @@ primary_region = "sea"
   HOST = "0.0.0.0"
   PORT = "3080"
   NODE_ENV = "production"
-  ALLOW_REGISTRATION = "true"
+  ALLOW_REGISTRATION = "false"
   ALLOW_EMAIL_LOGIN = "true"
   SEARCH = "false"
 
