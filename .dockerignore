@@ -15,3 +15,8 @@ docs
 
 # Ignore all hidden files
 .*
+
+# Re-include files needed for fly.io deployment
+!librechat.yaml
+!Dockerfile.fly
+!fly.toml
