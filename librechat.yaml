@@ -45,3 +45,9 @@ mcpServers:
       x-skills-key: "${SKILLS_MCP_KEY}"
     timeout: 60000
     initTimeout: 30000
+webSearch:
+  searchProvider: "tavily"
+  scraperProvider: "tavily"
+  rerankerType: "none"
+  tavilyApiKey: "${TAVILY_API_KEY}"
+  safeSearch: 0
